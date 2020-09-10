@@ -24,7 +24,7 @@ describe("runs enhancement tests", () => {
             enhancement: 6,
         })
     })
-    it("subtracts durability on failure", () => {
+    it("subtracts durability on failure at less than 15", () => {
         expect(enhancer.fail({
             name: "Sword",
             durability: 75,
@@ -35,7 +35,7 @@ describe("runs enhancement tests", () => {
             enhancement: 10,
         })
     })
-    it("Subtracts durability and enhacement level on failure", () => {
+    it("Subtracts durability on failure at +16", () => {
         expect(enhancer.fail({
             name: "Sword",
             durability: 75,
@@ -46,7 +46,7 @@ describe("runs enhancement tests", () => {
             enhancement: 16,
         })
     })
-    it("Subtracts enhancement level on failure", () => {
+    it("Subtracts enhancement level  and durability on failure", () => {
         expect(enhancer.fail({
             name: "Sword",
             durability: 75,
